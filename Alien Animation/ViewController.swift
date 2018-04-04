@@ -23,27 +23,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func ud(_ sender: Any) {
-        if counter == 5 {
-            counter = 1
-        } else {
-            counter = counter + 1
+        if counter == 5{
+            chk = false
+        }else if counter == 1{
+            chk = true
         }
-        miv.image = UIImage(named: "frame\(counter).png")
-    }
+        if chk == true{
+            counter = counter + 1
+            miv.image = UIImage(named: "frame\(counter).png")
+           ct.text = String(counter)
+        }else if chk == false{
+            counter = counter - 1
+            miv.image = UIImage(named: "frame\(counter).png")
+            ct.text = String(counter)
+        }
 }
-        //if counter == 5{
-            //chk = false
-        //}else if counter == 1{
-           // chk = true
-        //}
-        //if chk == true{
-         //   counter = counter + 1
-          //  miv.image = UIImage(named: "frame\(counter).png")
-          // ct.text = String(counter)
-       // }else if chk == false{
-        //    counter = counter - 1
-         //   miv.image = UIImage(named: "frame\(counter).png")
-         //   ct.text = String(counter)
-        //}
-//}
-//}
+}
